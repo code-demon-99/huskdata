@@ -15,7 +15,7 @@ class DataCleaner(threading.Thread):
 
     """
 
-    def __init__(self, dataset_location, not_required_headers,group=None,
+    def __init__(self, dataset_location, not_required_headers=none,group=None,
                  target=None, name=None,
                  args=(), kwargs=None, verbose=None):
         super().__init__() # getting the methods for thread class

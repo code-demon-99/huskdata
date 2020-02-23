@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+    {% load static %}
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/project.css' % }" "/>
+     
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body  >
+    
+
+    
+    <nav>
+    <div class="nav-wrapper orange  ">
+     
+     <ul class="left ">
+        <li><a href="#" >{% block person_name %} person name
+        {% endblock person_name %}</a></li>
+         
+     </ul>
+    <ul class="right ">
+        <li><a href="#"  >SignOut</a></li>
+    </ul>
+    </div>
+  </nav>
+  <br>
+
+  <div class = "container "  > 
+  {% block content %}
+
+  ujikhkjdhskjhgdsafiudshfu7ughdsjfgiuuidujhdskjhkjdhskjhdskjhdskjhdskjhkjdsfhkjhdskjahkjdsahfjlk   
+   {% endblock %}
+  </div>
+
+  
+
+    
+
+      <!--JavaScript at end of body for optimized loading-->
+      
+      <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+    </body>
+  </html>
+        

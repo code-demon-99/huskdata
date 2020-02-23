@@ -19,10 +19,11 @@ from django.conf.urls import (handler400, handler403, handler404, handler500)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('phaseone.urls',namespace='phaseone'))
+    path('',include('phaseone.urls',namespace='phaseone')),
+    path('',include('phasetwo.urls',namespace='phasetwo')),
     
-
 ]
+
 handler404 = 'errorhandler.views.handler404'
 handler400 = 'errorhandler.views.handler400'
 handler403 = 'errorhandler.views.handler403'

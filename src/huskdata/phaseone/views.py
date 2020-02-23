@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import *
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate
+from django.contrib import auth
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -24,8 +25,8 @@ def login(request):
         user = authenticate(username=username, password=password)
         if user:
             if user.is_active:
-                login(request,user)
-                return HttpResponseRedirect(reverse('phaseone:home'))
+                auth.login(request,user)
+                return HttpResponseRedirect(reverse('phasetwo:welcome'))
             else:
                 return HttpResponse("Your account was inactive.")
         else:
