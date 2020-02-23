@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'phaseone',
     'phasetwo',
     'errorhandler',
-    ]
+    'materialize',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

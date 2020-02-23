@@ -1,0 +1,8 @@
+{% extends 'base_.html' %}
+{% block person_name %}
+{{username}}
+{% endblock person_name %}
+{% block content %}
+<table id=" striped responsive-table centered"> {{ description.to_html |safe }} </table>
+<br>
+{% endblock content %}

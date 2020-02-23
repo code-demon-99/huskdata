@@ -1,4 +1,7 @@
 {% extends 'base_.html' %}
+{% block person_name %}
+{{username}}
+{% endblock person_name %}
 {% block content %}
  <div class = "row">
          <form class = "col s12" method ='POST' enctype="multipart/form-data">

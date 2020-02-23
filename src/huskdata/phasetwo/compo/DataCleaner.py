@@ -15,7 +15,7 @@ class DataCleaner(threading.Thread):
 
     """
 
-    def __init__(self, dataset_location, not_required_headers=none,group=None,
+    def __init__(self, dataset_location, not_required_headers=None,group=None,
                  target=None, name=None,
                  args=(), kwargs=None, verbose=None):
         super().__init__() # getting the methods for thread class
@@ -32,6 +32,8 @@ class DataCleaner(threading.Thread):
 
     def remove_uneccessary_data(self):
         """ removing not required fields """
+        if self.not_required_headers == None:
+            pass
         self.dataframe.drop(self.not_required_headers,axis=1,inplace=True)
         return 1
 
@@ -40,14 +42,14 @@ class DataCleaner(threading.Thread):
         self.dataframe.dropna(inplace=True)
         return 1
 
-    def remove_dupliactes(self):
+    def remove_duplicates(self):
         """Removing the duplicates from the dataframe"""
         self.dataframe.drop_duplicates(inplace=True)
         return 1
 
     def converting_data_types(self):
         """function for correcting the data types """
-        self.dataframe.apply(pd.to_numeric, errors='ignore', inplace=True)
+        self.dataframe=self.dataframe.apply(pd.to_numeric, errors='ignore')
         return 1
 
     def fix_typos(self):
