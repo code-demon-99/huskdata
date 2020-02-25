@@ -16,15 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import (handler400, handler403, handler404, handler500)
-
+from errorhandler import views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('phaseone.urls',namespace='phaseone')),
     path('',include('phasetwo.urls',namespace='phasetwo')),
-    
-]
 
-handler404 = 'errorhandler.views.handler404'
-handler400 = 'errorhandler.views.handler400'
-handler403 = 'errorhandler.views.handler403'
-handler500 = 'errorhandler.views.handler500'
+]
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = views.handler404
+handler400 = views.handler400
+handler403 = views.handler403
+handler500 = views.handler500

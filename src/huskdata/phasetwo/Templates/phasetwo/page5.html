@@ -1,0 +1,11 @@
+
+{% extends 'base_.html' %}
+{% block person_name %}
+{{username}}
+{% endblock person_name %}
+{% block content %}
+<h4>
+Please click below link to get the 'cleaned file'
+</h4>
+<a href={{cleaned_file_url}} class = "waves-effect waves-light btn btn-lg right orange">your cleaned file</a>
+{% endblock content %}

@@ -8,6 +8,7 @@ from django.conf import settings
 import os
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from .compo.DataExporter import DataExporter
 
 context = {}
 
@@ -17,7 +18,6 @@ def welcome(request):
     context['username']=str(request.user).capitalize()
     if request.method =='POST':
         file_  = request.FILES['dataset']
-        print("file:",file_)
         fs = FileSystemStorage()
         file_name=fs.save(str(request.user)+'/'+file_.name,file_)
         file_url=fs.url(file_name)
@@ -59,8 +59,18 @@ def page3(request):
     context['description']=cleaned_df.describe()
     return render(request,'phasetwo/page3.html',context)
 
-    
+def page5(request):
+    export_myfile = DataExporter(context['cleaned_dataframe'])
+    media = settings.MEDIA_ROOT
 
+    filename = f"/{context['file_name']}_cleaned.csv"
+    print(context['file_name'])
+    export_myfile.export_file(media+filename)
+    fs = FileSystemStorage()
+
+    context['cleaned_file_url']=fs.url(filename)
+
+    return render(request, 'phasetwo/page5.html',context)
 
 @login_required(login_url='/accounts/login/')
 def logout_view(request):

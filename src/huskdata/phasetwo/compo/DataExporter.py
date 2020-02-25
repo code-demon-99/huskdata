@@ -15,7 +15,7 @@ class DataExporter(Thread):
         self.dataframe = dataframe
 
     def export_file(self, path_to_file, suffix='csv'):
-        """this function export the dataframe to specified format ""
+        """this function export the dataframe to specified format """
         return self.dataframe.to_csv(path_to_file)
 
     def run(self):  # function to make the tthreads run simantaneously

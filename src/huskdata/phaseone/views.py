@@ -8,10 +8,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
+
 ###################################################################
 def home_view(request):
     """
-        home view or say main page for the project 
+        home view or say main page for the project
     """
     return render(request, "huskdata/home.html")
 ######################################################################
@@ -59,7 +60,7 @@ def signup(request):
 
 ##############################################################################
 
-#about us  section
+# about us  section
 def aboutus(request):
     """main"""
     return render(request,'huskdata/aboutus.html');
