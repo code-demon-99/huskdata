@@ -1,11 +1,16 @@
 {%extends 'base.html'%}
-{% block title%} Sign UP {%endblock%}
+{% block title%} Huskdata(register) {%endblock%}
 {% block content %}
  
-<!-- Material form register -->
-<div class="container "style="margin: auto ;padding:20px ;background :white;">
+<button type="submit" class="btn btn-fab-left btn-warning has-tooltip" data-placement="left" title="Register" onclick ="window.location.href = 'home';">
+ <i class="fas fa-home"></i> </button>
 
-    <h5 class="card-header white-text text-center " style="font-family:Times New Roman">
+ <button type="submit" class="btn btn-fab-right btn-warning has-tooltip" data-placement="left" title="Register" onclick ="window.location.href = 'signin';">
+<i class="fas fa-arrow-alt-circle-right"></i></button>
+<!-- Material form register -->
+<div class="glass-wrap glass text-center" style=" margin-top:6%; margin-left:30%; padding :5% ; background-color:rgba(0,0,0,0.6);">
+
+    <h5 class="  h3 text-center text-danger" style="font-family:Times New Roman">
         Sign up
     </h5>
 
@@ -19,28 +24,28 @@
                 <div class="col">
                     <!-- First name -->
                     <div class="md-form">
+                        <input type="text" id="materialRegisterFormFirstName" class="form-control" required placeholder="john" name="firstname" style = "padding:5px; background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red ">
                         <label for="materialRegisterFormFirstName">First name</label>
-                        <input type="text" id="materialRegisterFormFirstName" class="form-control" required name="firstname">
                     </div>
                 </div>
                 <div class="col">
                     <!-- Last name -->
                     <div class="md-form">
+                        <input type="text" id="materialRegisterFormLastName" class="form-control" required placeholder="snow" name ="lastname" style = " padding:5px;background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red;">
                         <label for="materialRegisterFormLastName">Last name</label>
-                        <input type="text" id="materialRegisterFormLastName" class="form-control" required name ="lastname">
                     </div>
                 </div>
             </div>
 
             <!-- E-mail -->
             <div class="md-form mt-0">
-                <label for="materialRegisterFormUsername">Username</label>
-                <input type="text" id="materialRegisterFormUsername" class="form-control" required name = "username" >
+                    <input type="text" id="materialRegisterFormUsername" class="form-control" required name = "username" placeholder ="john12" style = "padding:5px;background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red;" >
+                    <label for="materialRegisterFormUsername">Username</label>
             </div>
             <!--useranme-->
              <div class="md-form mt-0">
-                <label for="materialRegisterFormEmail">Email</label>
-                <input type="email" id="materialRegisterFormEmail" class="form-control" required name = "email">
+                <input type="email" id="materialRegisterFormEmail" class="form-control px-2" placeholder = "John.snow@xyz.com" required name = "email" style = "background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red;"> 
+                <label for="materialRegisterFormEmail" class="p-2">Email</label>
             </div>
 
 
@@ -48,17 +53,17 @@
 
              <div class="form-row">
                 <div class="col">
-                    <!-- First name -->
+                    <!--Password -->
                     <div class="md-form">
+                <input type="password" id="materialRegisterFormPassword" class="form-control p-2" placeholder="******** " aria-describedby="materialRegisterFormPasswordHelpBlock" required name = "password" style = "background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red;">
                         <label for="materialRegisterFormPassword">Password</label>
-                <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" required name = "password">
                     </div>
                 </div>
                 <div class="col">
-                    <!-- Last name -->
+                    <!-- confirm -->
                     <div class="md-form">
+                <input type="password" id="materialRegisterFormPhone" class="form-control p-2" placeholder="********" aria-describedby="materialRegisterFormPhoneHelpBlock" required  style = "background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red;" >
                       <label for="materialRegisterFormPassword">Password (confirm)</label>
-                <input type="password" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" required >
                     </div>
                 </div>
             </div>
@@ -68,7 +73,7 @@
                 
 
             
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Register</button>
+            <button class="btn btn-outline-danger btn-rounded btn-block my-4 waves-effect z-depth-0 text-light   " type="submit">Register</button>
 
           
 
