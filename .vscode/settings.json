@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "c:\\Users\\robust cast\\huskdata\\huskdata\\env\\Scripts\\python.exe",
+    "python.pythonPath": "env/bin/python3",
     "python.formatting.provider": "black"
 }
