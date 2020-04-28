@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "env/bin/python3",
+    "python.pythonPath": "/home/demonster/anaconda3/envs/huskdata/bin/python",
     "python.formatting.provider": "black"
 }

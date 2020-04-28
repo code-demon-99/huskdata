@@ -31,7 +31,7 @@ def login(request):
             else:
                 return HttpResponse("Your account was inactive.")
         else:
-            return HttpResponse("Invalid login details given")
+            return HttpResponse("Invalid login details given ")
     return render(request, 'huskdata/Log-in.html')
 ###########################################################################
 
