@@ -152,13 +152,14 @@ a,
  .btn-group-fab .btn-main {
    width: 50px; height: 50px;
    right: 50%; margin-right: -25px;
-   z-index: 9;
+   z-index: 100;
  }
 
  .btn-group-fab .btn-sub {
    bottom: 0; z-index: 8;
    right: 50%;
    margin-right: -20px;
+   z-index: 40;
    -webkit-transition: all 0.5  s;
    transition: all 0.5s;
  }
@@ -218,6 +219,27 @@ a,
   height: auto;
   right:20px; top: 20px;
 }
+
+.md-form > label{
+  color:#fff;
+}
+.md-form > input{
+  padding:5px;
+  background-color:rgba(0, 0, 0, 0);
+  color:seashell;
+  border:0;
+  outline:0;
+  border-bottom: 1px solid #fff
+
+}
+
+
+.md-form >input::placeholder{
+  color:#FFC500;
+  opacity: 0.6;
+}
+
+
 
 
 /********************/

@@ -105,7 +105,7 @@ DATABASES = {
 
         'USER': 'qtvvnduhpmsfkw',
 
-        'PASSWORD': '4b1cd1c52d6968a18c9bcc8aef1dda06f18373b1c628d2a7cabef1fce62aba06   ',
+        'PASSWORD': '4b1cd1c52d6968a18c9bcc8aef1dda06f18373b1c628d2a7cabef1fce62aba06',
 
         'HOST': 'ec2-184-72-236-3.compute-1.amazonaws.com',
 

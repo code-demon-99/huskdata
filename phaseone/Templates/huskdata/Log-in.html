@@ -6,8 +6,8 @@ Sign in
 {% block content%}
 <button type="submit" class="btn btn-fab-left btn-warning has-tooltip" data-placement="left" title="Register" onclick ="window.location.href = 'home';">
  <i class="fas fa-home"></i> </button>    
-
-<div class= " glass glass-wrap text-center p-5" style ="margin-top:14% ;margin-left: 40%; background-color: rgba(0,0,0,0.6);  " >
+<center>
+<div class= " glass glass-wrap  p-5" style ="margin-top:10%; background-color: rgba(0,0,0,0.6);text-align:justify;  " >
        
                 <div class="row ">
                     <div class="col-md-12 ">
@@ -17,8 +17,8 @@ Sign in
             
                                 <!-- form card login -->
                                 <div class=" rounded-0">
-                                    <div class="h4 text-danger">
-                                        <h3 class=" ">Login</h3>
+                                    <div class="">
+                                        <h3 class="text-warning " style=" font-family:Times,serif">Login</h3>
                                     </div>
                                     <div class="card-body">
                                             <form class="" method="post">
@@ -28,13 +28,13 @@ Sign in
                                                
                                                     <!-- Email -->
                                                     <div class="md-form">
-                                                      <input type="text" id="materialLoginFormusername" class="form-control p-2" placeholder="john12" name="username" style = "padding:5px; background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red ">
+                                                      <input type="text" id="materialLoginFormusername" class="form-control p-2" placeholder="john12" name="username" >
                                                         <label for="materialLoginFormPassword">UserName</label>
                                                     </div>
                                                       
                                                     <!-- Password -->
                                                     <div class="md-form">
-                                                      <input type="password" id="materialLoginFormPassword" class="form-control p-2" placeholder="********" name="password" style = "padding:5px; background-color:rgba(0,0,0,0); color:seashell; border:0;outline:0 ; border-bottom: 1px solid red ">
+                                                      <input type="password" id="materialLoginFormPassword" class="form-control p-2" placeholder="********" name="password" >
                                                       <label for="materialLoginFormPassword">Password</label>
                                                     </div>
                                               
@@ -47,12 +47,13 @@ Sign in
                                                     </div>
                                               
                                                     <!-- Sign in button -->
-                                                    <button class="btn btn-outline-danger text-light btn-rounded btn-block my-4 waves-effect z-depth-0 " type="submit">Sign in</button>
+                                                    <button class="btn btn-outline-danger  btn-rounded btn-block my-4 waves-effect z-depth-0 " type="submit">Sign in</button>
                                               
                                                     <!-- Register -->
                                                     <div class ="inline">
-                                                    <p>Not a member?
-                                                      <a class="btn btn-outline-success btn-rounded my-4 waves-effect z-depth-0" href="{% url 'phaseone:signup' %}">Register</a>
+                                                    <p>Not a member?  <span class="mx-2">     </span> 
+                                                    
+                                                      <a class="btn btn-outline-warning btn-rounded my-4 waves-effect z-depth-0" href="{% url 'phaseone:signup' %}">Register</a>
                                                     </p>
                                               </div>
                                                     <!-- Social login -->
@@ -77,4 +78,6 @@ Sign in
                 <!--/row-->
             </div>
             <!--/container-->
+</center>
+
 {% endblock%}

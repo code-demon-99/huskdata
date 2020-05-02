@@ -10,9 +10,9 @@ huskdata(home)
 {% block content %}
 
 <!--FAB -->
-<div class="btn-group-fab zoom" role="group" aria-label="FAB Menu">
+<div class="btn-group-fab " role="group" aria-label="FAB Menu">
   <div>
-    <button type="button" class="btn btn-main btn-danger has-tooltip" data-placement="left" title="next steps" onclick="$(function() {
+    <button type="button" class="btn btn-main btn-danger btn-lg has-tooltip" data-placement="left" title="next steps" onclick="$(function() {
     $('.btn-group-fab').on('click', '.btn', function() {
       $('.btn-group-fab').toggleClass('active');});
     $('has-tooltip').tooltip();});"> <i class="fas fa-plus"> </i> </button>
@@ -117,7 +117,7 @@ huskdata(home)
 
 </div>
 
-<div class="full-height text-center p-3 " id="team">
+<div class="full-height text-center " id="team">
   <div class="d-flex flex-column bd-highlight mb-3 glass-wrap glass">
     <div class="p-2 bd-highlight">
       <h1 style="color:#b37200; font-family:times">Team <i class="fas fa-users"></i></h1>
@@ -215,14 +215,14 @@ huskdata(home)
 
 
 <!--Contact form -->
-<div class="full-height p-5 text-center " id="Contact_us">
+<div class="full-height" id="Contact_us">
 
   <div class="glass glass-wrap">
-    <h1 class="p-2  " style=" color:#b37200;font-family:times">Contact Us </h1>
+    <h1 class=" " style=" color:#b37200;font-family:times">Contact Us </h1>
     <p class="p-2 text-light "> If You like to give some feedback or have some queries please contact us by form
       below</p>
-    <div class="form p-2  ">
-      <section class="mb-4">
+    <div class="form   ">
+      <section class="mb-2">
 
         <div class="row">
           <script type="text/javascript">
@@ -234,27 +234,24 @@ huskdata(home)
               }
               setTimeout(function () { document.getElementById("alertt").innerHTML = ''; }, 3000)
             }
-
-
-
           </script>
-          <iframe name="hidden_iframe" class='hidden_frame' id="hidden_iframe" onload="display()" style="display:none ">
+          <iframe name="hidden_iframe" class='hidden_frame' id="hidden_iframe" onload="display()" style="display:none">
 
           </iframe>
           <!--Grid column-->
           <div id='alertt'>
           </div>
-          <div class="col-md-9 mb-md-0 mb-5">
+          <div class="col-md-9">
             <form id="contact-form" name="contact-form"
               action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScmbKrsuLt4hm4oJOXEHVC66Db0Ai3RJxdVMoAemzbYpQ_9Ug/formResponse"
               method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
               <!--Grid row-->
-              <div class="row p-2">
+              <div class="row ">
 
                 <!--Grid column-->
                 <div class="col-md-6">
-                  <div class="md-form mb-0">
+                  <div class="md-form ">
                     <label for="name" class="">Your name</label>
                     <input type="text" id="name" name="entry.1881803031" class="form-control" required>
 
@@ -264,7 +261,7 @@ huskdata(home)
 
                 <!--Grid column-->
                 <div class="col-md-6">
-                  <div class="md-form mb-0">
+                  <div class="md-form ">
                     <label for="email" class="">Your email</label>
                     <input type="text" id="email" name="entry.931774519" class="form-control" required>
 
@@ -278,7 +275,7 @@ huskdata(home)
               <!--Grid row-->
               <div class="row">
                 <div class="col-md-12">
-                  <div class="md-form mb-0">.
+                  <div class="md-form">
                     <label for="subject" class="">Subject</label>
                     <input type="text" id="subject" name="entry.1933466204" class="form-control" required>
 
@@ -319,7 +316,7 @@ huskdata(home)
           <!--Grid column-->
           <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-              <li><i class="fas fa-map-marker-alt fa-2x zoom text-danger"></i>
+              <li><i class="fas fa-map-marker-alt mt-4 fa-2x zoom text-danger"></i>
                 <p>Indore,Madhya Padesh ,INDIA</p>
               </li>
 
