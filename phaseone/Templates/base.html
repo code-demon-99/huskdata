@@ -79,6 +79,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script>
+    $(document).ready(function(){
+       $(function() {
+    $(document).click(function (event) {
+    $('.navbar-collapse').collapse('hide');
+    });
+})   
+
+    });
     const preloader = document.querySelector('.preloader');
     const fadeEffect = setInterval(() => {
       // if we don't set opacity 1 in CSS, then

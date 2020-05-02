@@ -48,9 +48,9 @@ $RECYCLE.BIN/
 /env/*
 __pycache__/*
 Uploads/*
-cleaned_file
+*/cleaned_file/*
 
 
 # ignore csv files
 *.csv
-*/*/static
+
