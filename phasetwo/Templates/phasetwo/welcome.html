@@ -1,0 +1,28 @@
+{% extends 'base_.html' %}
+{% block person_name %}
+{{username}}
+{% endblock person_name %}
+{% block content %}
+ <div class = "row">
+         <form class = "col s12" method ='POST' enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class = "row">
+               <label>Materialize File Input</label>
+               <div class = "file-field input-field">
+                  <div class = "btn">
+                     <span>Browse</span>
+                     <input type = "file" name = 'dataset' />
+                  </div>
+                  
+                  <div class = "file-path-wrapper">
+                     <input class = "file-path validate" type = "text"
+                        placeholder = "Upload file" />
+                        <button class="btn waves-effect waves-light" type="submit" >Submit
+    <i class="material-icons right">upload</i>
+  </button>
+        
+                  </div>
+               </div>
+            </div>  
+        </form>
+{% endblock content %}

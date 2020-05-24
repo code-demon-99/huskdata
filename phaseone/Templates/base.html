@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- loading static  -->
+  {% load static %}
+
+   <!-- SEO meta Tag  -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- title of Project  -->
+
+  <title>{% block title %} BASE {% endblock  %}</title>
+  
+  <!-- favicon -->
+
+ <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+<link rel="manifest" href="/static/favicons/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- favicon end -->
+
+  <!-- css files and javascripts required for the webpage  -->
+  <style>
+  .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+  </style>
+
+  <link rel="stylesheet" type="text/css" href=" {% static 'css/divstyles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  <!-- fontawesome  -->
+  <script src="https://kit.fontawesome.com/a69fc14833.js" crossorigin="anonymous"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <!-- END FILES -->
+</head>
+<body onload="window.addEventListener('load', fadeEffect);" >
+
+
+  <!--
+  preloader
+  -->
+  <div class="preloader">
+    <img src="static/images/preloader.svg" alt="spinner">
+  </div>
+  
+  <!-- preloader end  -->
+
+    <!-- content for diffrent pages  -->
+      {% block content %}
+
+      {% endblock %}
+
+    <!-- end content  -->
+  
+
+  <!-- javascripts -->
+
+  <script src="static/js/some.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+       $(function() {
+    $(document).click(function (event) {
+    $('.navbar-collapse').collapse('hide');
+    
+    });
+})   
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+    });
+    const preloader = document.querySelector('.preloader');
+    const fadeEffect = setInterval(() => {
+      // if we don't set opacity 1 in CSS, then
+      // it will be equaled to "" -- that's why
+      // we check it, and if so, set opacity to 1
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity > 0) {
+        preloader.style.opacity -= 0.1;
+        preloader.classList.add("loaded");
+      } else {
+        clearInterval(fadeEffect);
+      }
+
+    }, 100);
+
+    function redirect()
+    {
+    var url = "signup.php";
+    window.location(url);
+    }
+
+  </script>
+
+  <!-- end javascripts -->
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!-- home page -->
+
+<!--extends the base.html file-->
+{% extends 'base.html' %}
+
+{% block title %}
+huskdata(home)
+{% endblock %}r
+
+{% block content %}
+
+<!--FAB -->
+<div class="btn-group-fab " role="group" aria-label="FAB Menu">
+  <div>
+    <button type="button" class="btn btn-main btn-danger btn-lg has-tooltip" data-placement="left" title="next steps" onclick="$(function() {
+    $('.btn-group-fab').on('click', '.btn', function() {
+      $('.btn-group-fab').toggleClass('active');});
+    $('has-tooltip').tooltip();});"> <i class="fas fa-plus"> </i> </button>
+    
+   <button type="submit" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Register" onclick ="window.location.href = 'signup.php';"> <i
+        class="fas fa-user-plus"></i> </button>
+  
+    <button type="button" class="btn btn-sub btn-primary has-tooltip" data-placement="left" title="login" onclick ="window.location.href = 'signin';"> <i
+        class="fas fa-user-tie"></i></button>
+
+  </div>
+</div>
+<!--Nav BAR -->
+<nav class=" container navbar fixed-top navbar-expand-lg text-center">
+  <a class="navbar-brand disabled" href="#home">HuskData </a>
+  <button class="navbar-toggler" type="button" id="ChangeToggle" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class=""></span>
+    <div class="fa fa-caret-square-down " live style="color:#b37200	; font-size:28px;"></i>
+
+  </button>
+
+  <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aim">AIM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#feature">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Contact_us">Contact us</a>
+      </li>
+
+
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<div class="full-height text-center " id="home">
+
+
+  <div class="row   glass-wrap glass  ">
+    <div class="col-md-6 zoom  "><img class="img-fluid   p-5" src='static/images/logoq.png'></div>
+    <div class="col-md-6 border-right border-left">
+
+      <h1 class="display-5" style="color:#b37200; font-family  :'Times New Roman', Times, serif">The Project </h1>
+      <p class="  h5 text-left" style="padding:10px ;color:Whitesmoke;font-family :times">
+        The Project is all about a data pre-processing tool
+        so that one can clean their data with some clicks disregarding of background(i.e.
+        Technical/non-Technical )
+        the tool can help a lot while having a busy day . <span id="dots">...</span><span id="more">
+          "using this tool you can just click click click and get the data cleaned"
+          the tool is now just a start and there are several updates yet to come and this may be just treated
+          as a boy`s fun with programming.
+        </span>
+      </p>
+      <button class="btn" style="font-rfamily: times;color:#fffr; background-color:#7a0500;" onclick="myFunction()" id="myBtn">know
+        more</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="full-height" id="aim">
+
+  <div class="row glass-wrap glass ">
+    <div class="col-md-6  text-center   ">
+      <h1 class=" h1  py-5 " style="color:#b37200; font-weight:bold;font-family:Times; "> WHAT IS OUR <i
+          class="fas fa-bullseye zoom  " style="color: #b37200; "></i></h1>
+
+    </div>
+
+    <div class="col-md-6 border-right border-left ">
+      <p class=" h5 p-5 text-justify  " style="color: white ; font-family : times;">
+        The project is about data cleaning but the theory behind the project is all about the insights we get
+        from the data
+        but to make the insights correct the project is proposed.
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<div class="full-height text-center " id="team">
+  <div class="d-flex flex-column bd-highlight mb-3 glass-wrap glass">
+    <div class="p-2 bd-highlight">
+      <h1 style="color:#b37200; font-family:times">Team <i class="fas fa-users"></i></h1>
+    </div>
+    <div class="p-2 bd-highlight">
+      <img>
+    </div>
+    <div class="p-2 bd-highlight">
+      <div class="row border-right border-left ">
+        <div class="col-md-4">
+          <div class="zoom">
+            <img class="img-fluid p-2 rounded-circle" src="static/images/finalPhoto thumb.jpg" width="50%">
+            <h4 style="color:#b37200; font-family:times;">
+              Rishi Namdev </h4>
+            </h5>
+            <h5 style="color:#a35200;font-family :times">Project integrator</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="zoom">
+            <img class="img-fluid p-2 rounded-circle" src="static/images/sumit.jpeg" width="50%">
+            <h4 style="color:#b37200; font-family:times;">
+               Sumit Sharma
+            </h4>
+            <h5 style="color:#a35200;font-family :times">Database Designer</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="zoom">
+            <img class="img-fluid p-2 rounded-circle" src="static/images/Ritika.jpeg" width="50%">
+            <h4 style="color:#b37200; font-family:times;">
+               Ritika Yadav 
+            </h4>
+            <h5 style="color:#a35200;font-family :times">
+               UI/UX designer 
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full-height text-center " id="feature">
+  <div class="d-flex flex-column bd-highlight mb-3 glass-wrap glass">
+    <div class="p-2 bd-highlight">
+      <h1 style="color:white;font-family :times; border-bottom:5px dashed #b37200 ; display: inline-block; ">
+        Features</u>
+      </h1>
+    </div>
+    <div class="p-2 bd-highlight">
+      <img>
+    </div>#a35200
+    <div class="p-2 bd-highlight">
+      <div class="row border-bottom  ">
+        <div class="col-md-6   p-2">
+          <div class="features">
+            <h1>
+              THE WEB BASED APPROACH
+            </h1>
+            <p class="text-center px-5">
+              The Project is kept web oriented so that anyone can access it anywhere to deal with small
+              datasets.
+            </p>
+
+          </div>
+
+        </div>
+        <div class="col-md-6  p-2">
+          <div class="features">
+            <h1>SIMPLICITY </h1>
+            <p class="text-center px-5  "> the UI is kept as simple as possible once you log in you get a
+              basic material look and wizard looking ui </p>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-6 features   p-2">
+          <h1 class="py-2">RELIABLITY</h1>
+          <p class="px-5 text-center"> You can always rely on us as we don't use the users data in any form
+            without their permission . </p>
+        </div>
+        <div class="col-md-6 features p-2">
+          <h1 class="py-2"> SMALL BUT USEFULL </h1>
+          <p class="px-5 "> yes its small peice of software with various functionalities </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!--Contact form -->
+<div class="full-height" id="Contact_us">
+
+  <div class="glass glass-wrap">
+    <h1 class=" " style=" color:#b37200;font-family:times">Contact Us </h1>
+    <p class="p-2 text-light "> If You like to give some feedback or have some queries please contact us by form
+      below</p>
+    <div class="form   ">
+      <section class="mb-2">
+
+        <div class="row">
+          <script type="text/javascript">
+            var submitted = false;
+            function display() {
+
+              if (submitted) {
+                document.getElementById("alertt").innerHTML = " <div class='alert alert-success' role='alert'> We got your message , we will reach you shortly </div>";
+              }
+              setTimeout(function () { document.getElementById("alertt").innerHTML = ''; }, 3000)
+            }
+          </script>
+          <iframe name="hidden_iframe" class='hidden_frame' id="hidden_iframe" onload="display()" style="display:none">
+
+          </iframe>
+          <!--Grid column-->
+          <div id='alertt'>
+          </div>
+          <div class="col-md-9">
+            <form id="contact-form" name="contact-form"
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScmbKrsuLt4hm4oJOXEHVC66Db0Ai3RJxdVMoAemzbYpQ_9Ug/formResponse"
+              method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+              <!--Grid row-->
+              <div class="row ">
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form ">
+                    <label for="name" class="">Your name</label>
+                    <input type="text" id="name" name="entry.1881803031" class="form-control" required>
+
+                  </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form ">
+                    <label for="email" class="">Your email</label>
+                    <input type="text" id="email" name="entry.931774519" class="form-control" required>
+
+                  </div>
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <label for="subject" class="">Subject</label>
+                    <input type="text" id="subject" name="entry.1933466204" class="form-control" required>
+
+                  </div>
+                </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12">
+
+                  <div class="md-form">
+                    <label for="message">Your message</label>
+                    <textarea type="text" id="message" name="entry.1960397516" rows="2" class="form-control md-textarea"
+                      required></textarea>
+
+                  </div>
+
+                </div>
+              </div>
+              <br>
+              <div class="text-center text-md-left">
+                <button class="btn " type="submit" style="background-color: #b37200; width:100% ">Send <i class="fa fa-paper-plane"
+                    aria-hidden="true"></i></a>
+              </div>
+              <div class="status"></div>
+          </div>
+          <!--Grid row-->
+
+          </form>
+
+
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+              <li><i class="fas fa-map-marker-alt mt-4 fa-2x zoom text-danger"></i>
+                <p>Indore,Madhya Padesh ,INDIA</p>
+              </li>
+
+              <li><i class="fas fa-phone mt-4 fa-2x zoom text-primary"></i>
+                <p>+ 91 975377 2465</p>
+              </li>
+
+              <li><i class="fas fa-envelope mt-4 fa-2x zoom text-warning"></i>
+                <p>namdev.rishi.developer@gmail.com</p>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+{% endblock %}

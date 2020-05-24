@@ -1,0 +1,26 @@
+{% extends 'base_.html' %}
+{% block person_name %}
+{{username}}
+{% endblock person_name %}
+{% block content %}
+<table id=" striped responsive-table centered"> {{ head_df.to_html |safe }} </table>
+<br>
+<h5> Select Fields that you dont want! </h5>
+  <!-- Switch -->
+  
+  <form class ="inline-form" method ="POST">
+   {% csrf_token %}
+        {% for column in columns  %}   
+    <p>
+      <label>
+        <input id="indeterminate-checkbox "  name=inputs id="{{column}}" value={{column}} type="checkbox" />
+        <span>{{column}}</span>
+      </label>
+    </p>
+     {% endfor %}
+     <button class="waves-effect waves-light btn right orange" type = 'submit'>next</a>
+  </form>
+ <br>
+<br>
+
+{% endblock content %}
