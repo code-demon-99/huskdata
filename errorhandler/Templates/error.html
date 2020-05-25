@@ -20,7 +20,7 @@ body {
             <div class="col-md-12 text-center">
                 <span class="display-1 d-block">{% block errornum%}404{% endblock %}</span>
                 <div class="mb-4 lead">{% block errormsg%}The page you are looking for was not found.{% endblock %}</div>
-                <a href="{% url ' phaseone:home' %}" class="btn btn-link">Back to Home</a>
+                <a href="{% url 'phaseone:home' %}" class="btn btn-link">Back to Home</a>
             </div>
         </div>
     </div>
@@ -29,4 +29,3 @@ body {
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </HTML>
-

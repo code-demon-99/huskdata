@@ -20,6 +20,11 @@ def home_view(request):
 ######################################################################
 def login(request):
     """User Login View """
+    msg=""
+
+    if request.user.is_authenticated:
+        return redirect('phasetwo:welcome')
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -29,15 +34,18 @@ def login(request):
                 auth.login(request,user)
                 return HttpResponseRedirect(reverse('phasetwo:welcome'))
             else:
-                return HttpResponse("Your account was inactive.")
+                msg = "Your account was inactive. please contact admin by contact us form on home page"
         else:
-            return HttpResponse("Invalid login details given ")
-    return render(request, 'huskdata/Log-in.html')
+            msg = "given usename/password is invalid!!!!"
+    return render(request, 'huskdata/Log-in.html',context={'message':msg})
 ###########################################################################
 
 ###########################################################################
 def signup(request):
-    """ User Register View"""
+    msg =""
+    if request.user.is_authenticated:
+        return redirect('phasetwo:welcome')
+
     if request.method == "POST":
         # user details collection
         fname = request.POST.get('firstname')
@@ -49,13 +57,13 @@ def signup(request):
         try:
             user=User.objects.create_user(username=username, password=password,email=email,first_name=fname,last_name =lname)
         except:
-            return HttpResponse("please enter valid username/password")
+            msg= "please create another username/password it cannot be created "
         # finally saving the form
         user.save()
         return redirect('phaseone:login')
-    else:
+
         # main register paghe load on first call
-        return render(request, 'huskdata/signup.html',)
+    return render(request, 'huskdata/signup.html',context={'message':msg})
 ##############################################################################
 
 ##############################################################################
