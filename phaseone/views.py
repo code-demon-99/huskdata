@@ -59,13 +59,14 @@ def signup(request):
         # checking user can be saved or not
         try:
             user=User.objects.create_user(username=username, password=password,email=email,first_name=fname,last_name =lname)
-        else:
+        except IntegrityError as e: 
+            msg = "please create another username/password it cannot be created(user already exists) "
+        except:
             msg= "please create another username/password it cannot be created "
         # finally saving the form
             user.save()
             return redirect('phaseone:login')
-        except IntegrityError as e: 
-            msg = "please create another username/password it cannot be created(user already exists) "
+        
 
         # main register paghe load on first call
     return render(request, 'huskdata/signup.html',context={'message':msg})
