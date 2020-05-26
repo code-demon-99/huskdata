@@ -8,6 +8,11 @@
  <button type="submit" class="btn btn-fab-right btn-warning has-tooltip" data-placement="left" title="Register" onclick ="window.location.href = 'signin';">
 <i class="fas fa-arrow-alt-circle-right"></i></button>
 <!-- Material form register -->
+ {% if message is not "" %}
+<div class="text-warning glass glass-warp p-2 mx-auto my-2 w-50"  >
+   {{ message }}
+</div>
+  {% endif %}
 
 <center>
 <div class="glass-wrap glass  " style="background-color:rgba(0,0,0,0.5);">
