@@ -7,13 +7,13 @@
 <br>
 <h5> Select Fields that you dont want! </h5>
   <!-- Switch -->
-  
+
   <form class ="inline-form" method ="POST">
    {% csrf_token %}
-        {% for column in columns  %}   
+        {% for column in columns  %}
     <p>
       <label>
-        <input id="indeterminate-checkbox "  name=inputs id="{{column}}" value={{column}} type="checkbox" />
+        <input id="indeterminate-checkbox "  name=inputs id="{{column}}" value='{{column}}' type="checkbox" />
         <span>{{column}}</span>
       </label>
     </p>

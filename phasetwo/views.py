@@ -35,7 +35,7 @@ def page2(request):
     context['dataset_location'] = path
     df=pd.read_csv(path)
     head=df.head(10)
-    context['columns']= head.columns
+    context['columns']= df.columns
     context['head_df'] = head
     if request.method == 'POST':
         list_of_input_ids = request.POST.getlist('inputs')
