@@ -33,12 +33,9 @@ def login(request):
                 auth.login(request,user)
                 return HttpResponseRedirect(reverse('phasetwo:welcome'))
             else:
-                msg = "Your account was inactive. please contact admin by contact us form on home page"
+                msg = "Your account was inactive. please contact Project admin by contact us form on home page"
         else:
-            msg="Invalid Login Details Please Check once again"
-    return render(request, 'huskdata/Log-in.html',context={"message":msg})
-
-            msg = "given usename/password is invalid!!!!"
+            msg = " cant login given usename/password is invalid!!!! "
     return render(request, 'huskdata/Log-in.html',context={'message':msg})
 
           
