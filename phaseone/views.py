@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.db import IntegrityError
 
 
 
@@ -63,6 +64,8 @@ def signup(request):
         # finally saving the form
             user.save()
             return redirect('phaseone:login')
+        except IntegrityError as e: 
+            msg = "please create another username/password it cannot be created(user already exists) "
 
         # main register paghe load on first call
     return render(request, 'huskdata/signup.html',context={'message':msg})
