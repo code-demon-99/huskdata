@@ -59,7 +59,7 @@ def signup(request):
         # checking user can be saved or not
         try:
             user=User.objects.create_user(username=username, password=password,email=email,first_name=fname,last_name =lname)
-        except:
+        else:
             msg= "please create another username/password it cannot be created "
         # finally saving the form
             user.save()
