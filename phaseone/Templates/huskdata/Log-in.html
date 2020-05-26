@@ -4,74 +4,91 @@
 Sign in
 {%endblock%}
 {% block content%}
+
 <button type="submit" class="btn btn-fab-left btn-warning has-tooltip" data-placement="left" title="Register" onclick ="window.location.href = 'home';">
- <i class="fas fa-home"></i> </button>    
+ <i class="fas fa-home"></i> </button>
+ {% if message is not "" %}
+<div class="text-warning glass glass-warp p-2 mx-auto my-2 w-50"  >
+   {{ message }}
+</div>
+  {% endif %}
 <center>
-<div class= " glass glass-wrap  p-5" style ="margin-top:10%; background-color: rgba(0,0,0,0.6);text-align:justify;  " >
-       
+
+
+
+
+<div class= " glass glass-wrap  p-5" style =" margin-top:5%; background-color: rgba(0,0,0,0.6);text-align:justify;  " >
+
+
                 <div class="row ">
                     <div class="col-md-12 ">
-                        
+
                         <div class="row">
 
-            
+
                                 <!-- form card login -->
                                 <div class=" rounded-0">
                                     <div class="">
                                         <h3 class="text-warning " style=" font-family:Times,serif">Login</h3>
                                     </div>
                                     <div class="card-body">
-                                            <form class="" method="post">
+                                            <form class="" method="post" id="loginForm">
                                                 {% csrf_token %}
-                                                
 
-                                               
+
+
                                                     <!-- Email -->
-                                                    <div class="md-form">
-                                                      <input type="text" id="materialLoginFormusername" class="form-control p-2" placeholder="john12" name="username" >
-                                                        <label for="materialLoginFormPassword">UserName</label>
+                                                    <div class="md-form w-100">
+                                                      <input type="text" id="materialLoginFormusername" class="form-control p-2 w-100" placeholder="john12" name="username" required >
+                                                        <label for="materialLoginFormusername">UserName</label>
+
+                                                        </div>
+                                                              <!-- #must not staart with number
+                                                                    # may contain letters
+                                                                    #
+                                                             -->                                                  <!--  -->
                                                     </div>
-                                                      
+
                                                     <!-- Password -->
                                                     <div class="md-form">
-                                                      <input type="password" id="materialLoginFormPassword" class="form-control p-2" placeholder="********" name="password" >
+                                                      <input type="password" id="materialLoginFormPassword" class="form-control p-2" placeholder="********" name="password" required >
                                                       <label for="materialLoginFormPassword">Password</label>
                                                     </div>
-                                              
+
                                                     <div class="d-flex justify-content-around">
                                                       <div>
-                                                       
+
                                                         <!-- Forgot password -->
-                                                        <a href="">Forgot password?</a>
+                                                        <a class="disabled" href="">Forgot password?</a>
                                                       </div>
                                                     </div>
-                                              
+
                                                     <!-- Sign in button -->
                                                     <button class="btn btn-outline-danger  btn-rounded btn-block my-4 waves-effect z-depth-0 " type="submit">Sign in</button>
-                                              
+
                                                     <!-- Register -->
                                                     <div class ="inline">
-                                                    <p>Not a member?  <span class="mx-2">     </span> 
-                                                    
+                                                    <p class="text-light">Not a member?  <span class="mx-2">     </span>
+
                                                       <a class="btn btn-outline-warning btn-rounded my-4 waves-effect z-depth-0" href="{% url 'phaseone:signup' %}">Register</a>
                                                     </p>
                                               </div>
                                                     <!-- Social login -->
-                                                    
-                                                       
-                                                    
+
+
+
                                                   </form>
                                     </div>
                                     <!--/card-block-->
                                 </div>
                                 <!-- /form card login -->
-            
+
                             </div>
-            
-            
+
+
                         </div>
                         <!--/row-->
-            
+
                     </div>
                     <!--/col-->
                 </div>
@@ -80,4 +97,11 @@ Sign in
             <!--/container-->
 </center>
 
-{% endblock%}
+
+{% endblock %}
+
+{% block 'Script' %}
+
+
+
+{% endblock %}

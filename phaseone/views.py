@@ -20,6 +20,8 @@ def home_view(request):
 ######################################################################
 def login(request):
     """User Login View """
+    msg=""
+    context={}
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -31,8 +33,8 @@ def login(request):
             else:
                 return HttpResponse("Your account was inactive.")
         else:
-            return HttpResponse("Invalid login details given ")
-    return render(request, 'huskdata/Log-in.html')
+            msg="Invalid Login Details Please Check once again"
+    return render(request, 'huskdata/Log-in.html',context={"message":msg})
 ###########################################################################
 
 ###########################################################################

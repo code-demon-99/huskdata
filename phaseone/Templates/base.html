@@ -9,11 +9,11 @@
 
   <!-- Responsive meta tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
   <!-- title of Project  -->
 
   <title>{% block title %} BASE {% endblock  %}</title>
-  
+
   <!-- favicon -->
 
  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
@@ -49,7 +49,7 @@
 
   <!-- END FILES -->
 </head>
-<body onload="window.addEventListener('load', fadeEffect);" >
+<body onload="window.addEventListener('load', fadeEffect)" >
 
 
   <!--
@@ -58,7 +58,7 @@
   <div class="preloader">
     <img src="static/images/preloader.svg" alt="spinner">
   </div>
-  
+
   <!-- preloader end  -->
 
     <!-- content for diffrent pages  -->
@@ -67,9 +67,10 @@
       {% endblock %}
 
     <!-- end content  -->
-  
+
 
   <!-- javascripts -->
+
 
   <script src="static/js/some.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -78,35 +79,39 @@
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="static/js/some.js"></script>
   <script>
-    $(document).ready(function(){
+  const preloader = document.querySelector('.preloader');
+  const fadeEffect = setInterval(() => {
+    // if we don't set opacity 1 in CSS, then
+    // it will be equaled to "" -- that's why
+    // we check it, and if so, set opacity to 1
+    if (!preloader.style.opacity) {
+      preloader.style.opacity = 1;
+    }
+    if (preloader.style.opacity > 0) {
+      preloader.style.opacity -= 0.1;
+      preloader.classList.add("loaded");
+    } else {
+      clearInterval(fadeEffect);
+    }
+
+  }, 100);
+
+  $(document).ready(function(){
        $(function() {
     $(document).click(function (event) {
     $('.navbar-collapse').collapse('hide');
-    
-    });
-})   
-$('.navbar-nav>li>a').on('click', function(){
+});
+})
+$('.navbar-nav>li>a').click(function(){
     $('.navbar-collapse').collapse('hide');
 });
-
+{% block 'Script' %}
+{% endblock %}
     });
-    const preloader = document.querySelector('.preloader');
-    const fadeEffect = setInterval(() => {
-      // if we don't set opacity 1 in CSS, then
-      // it will be equaled to "" -- that's why
-      // we check it, and if so, set opacity to 1
-      if (!preloader.style.opacity) {
-        preloader.style.opacity = 1;
-      }
-      if (preloader.style.opacity > 0) {
-        preloader.style.opacity -= 0.1;
-        preloader.classList.add("loaded");
-      } else {
-        clearInterval(fadeEffect);
-      }
 
-    }, 100);
+
 
     function redirect()
     {
@@ -114,9 +119,13 @@ $('.navbar-nav>li>a').on('click', function(){
     window.location(url);
     }
 
+
+
   </script>
 
+
   <!-- end javascripts -->
+
 
 </body>
 </html>
