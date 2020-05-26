@@ -61,8 +61,8 @@ def signup(request):
         except:
             msg= "please create another username/password it cannot be created "
         # finally saving the form
-        user.save()
-        return redirect('phaseone:login')
+            user.save()
+            return redirect('phaseone:login')
 
         # main register paghe load on first call
     return render(request, 'huskdata/signup.html',context={'message':msg})
