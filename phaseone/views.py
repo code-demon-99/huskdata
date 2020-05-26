@@ -21,7 +21,6 @@ def home_view(request):
 def login(request):
     """User Login View """
     msg=""
-
     if request.user.is_authenticated:
         return redirect('phasetwo:welcome')
 
@@ -36,8 +35,14 @@ def login(request):
             else:
                 msg = "Your account was inactive. please contact admin by contact us form on home page"
         else:
+            msg="Invalid Login Details Please Check once again"
+    return render(request, 'huskdata/Log-in.html',context={"message":msg})
+
             msg = "given usename/password is invalid!!!!"
     return render(request, 'huskdata/Log-in.html',context={'message':msg})
+
+          
+
 ###########################################################################
 
 ###########################################################################

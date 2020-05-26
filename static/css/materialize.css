@@ -9065,3 +9065,32 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+
+
+.error_form{
+  color: red;
+}
+
+#fname_error_message{
+  color: red;
+}
+
+#lname_error_message{
+  color: red;
+}
+
+#uname_error_message{
+  color: red;
+}
+
+#email_error_message{
+  color: red;
+}
+
+#password_error_message{
+  color: red;
+}
+
+#confirm_password_error_message{
+  color: red;
+}
