@@ -24,13 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'oayt(h_#&4xs4)q0*9m_!pt+%b9kb&908@ii31bgq6&iu^9a*&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 if DEBUG is False:
     ALLOWED_HOSTS = [
-        '127.0.0.1:8000',
-        'huskdata.herokuapp.com',
+        '*',
     ]
 
 if DEBUG is True:
